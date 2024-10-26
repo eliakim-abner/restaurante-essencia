@@ -1,0 +1,140 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    height: 100vh;
+    background-image: url(../assets/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 20%;
+    background-attachment: fixed;
+    background-size: cover;
+  
+
+}
+.logotipo-svg{ /* estilização da posição e tamanho da logo */
+    position: relative;
+    right:80px;
+    width: 230px;
+    height: 230px;
+}
+.menu-nav{ /* Estilização do menu de navegação*/
+    position: fixed;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding-inline: 90px;
+    height: 80px;
+    width: 100%;
+    font-size:16px;  
+    background-color: #2f2f2f;
+    color: aliceblue;
+    font-family: "Poppins", sans-serif;
+    font-size: 19px;
+    font-weight: 300;
+}
+.menu-nav ul{ /* estilização da lista*/
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    height: 12px;
+    gap:30px ;
+    position: absolute;
+    right: 0;
+    left: 0;
+  
+    
+}
+.menu-nav-itens{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+    
+    
+}
+.menu-nav-itens a{
+    font-weight: 400;
+    text-decoration: none;
+    color: #f6f6f6;
+    font-size: 12px;
+}
+.menu-nav-list a{ /* estlização da ancora(a) */
+    font-weight: 400;
+    text-decoration: none;
+    color: #f6f6f6f6;
+    position: relative;
+    font-size: 20px;
+}
+.menu-nav-list li a::after{
+    content: " ";
+    width: 0%;
+    height: 2px;
+    background-color: #DEB887;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s ease-in;
+}
+.menu-nav-list li a:hover::after{ /* hover da o efeito quando passa o mouse por cima das aba do menu fazendo mudar de cor */
+    width: 100%;
+   
+}
+
+.menu-nav-list a:hover{
+    transition-property: color;
+    transition-duration: 1s;
+    color: #DEB887;
+}
+.botao-reserva{
+    background-color: transparent;
+    border-radius: 60px;
+    border: 1px solid #DEB887;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+    width: 45px;
+    position: fixed;
+    transition-duration: 1s;
+
+    
+
+   
+}
+.botao-reserva:hover{
+    width: 100px;
+}
+a span{
+    position: absolute;
+}
+.icone-reserva{
+    height: 30px;
+    width: 30px;
+    font-size: 30px;
+    transition: 1s;
+  
+    
+    
+}
+.text-reserva{
+    color: #f6f6f6;
+    font-size: 18px;
+    transform: scale(0);
+    transition: 1s;
+   
+    
+}
+.botao-reserva:hover .text-reserva{
+    transition-property:all;
+    transition: 1s;
+    color: #DEB887;
+    transform: scale(1);
+    transition-delay: 0.1s;
+}
+.botao-reserva:hover .icone-reserva{
+    transform: scale(0);
+}
